@@ -8,7 +8,7 @@ const menuContainer = document.getElementById('menu-container') // The main menu
 const darkLight = document.getElementById('darkLight') // The dark/light mode toggle container
 
 // Function to toggle dark mode
-const toggle = () => html.classList.toggle('dark')
+const toggleTheme = () => html.classList.toggle('dark')
 
 // Function to set the current view based on the button clicked
 const setView = (v) => {
@@ -138,8 +138,8 @@ const renderMenu = () => {
 
 // Function to render the dark/light mode toggle buttons
 const renderThemeToggle = () => {
-    const darkHTML = `<button class="dark:hidden block" onclick="toggle()">Dark</button>
-    <button class="hidden dark:block" onclick="toggle()">Light</button>`
+    const darkHTML = `<button class="dark:hidden block" onclick="toggleTheme()">Dark</button>
+    <button class="hidden dark:block" onclick="toggleTheme()">Light</button>`
 
     darkLight.innerHTML = darkHTML
 }
